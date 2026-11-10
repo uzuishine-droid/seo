@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bloom Eternal</title>
+<meta name="description" content="Bloom Eternal: flower-shaped gold jewelry with lab-grown diamonds.">
+<meta name="theme-color" content="#17352B">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Jeweler","name":"Bloom Eternal","description":"Flower-shaped gold jewelry with lab-grown diamonds"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;600&family=Noto+Sans+Armenian:wght@400;600&family=Noto+Serif+Armenian:wght@500;600&display=swap">
+<style>
+:root{--bg:#F8F2F3;--ink:#1E2A24;--mute:#5B6962;--card:#FFFFFF;--line:#E6D9DB;--gold:#8E6A2C;--hero:#17352B;--hero-ink:#F6EDE8;--petal:#F2C9D0;--tile:#F1E4E6;
+--serif:'Cormorant Garamond','Noto Serif Armenian',Georgia,serif;--sans:'Manrope','Noto Sans Armenian',system-ui,-apple-system,'Segoe UI',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A15;--ink:#F0E8E4;--mute:#A9B7AF;--card:#17271F;--line:#26382F;--gold:#D9B77E;--hero:#0A1410;--tile:#1E3228}}
+:root[data-theme="dark"]{--bg:#0F1A15;--ink:#F0E8E4;--mute:#A9B7AF;--card:#17271F;--line:#26382F;--gold:#D9B77E;--hero:#0A1410;--tile:#1E3228}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hero);z-index:20}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--hero);color:var(--hero-ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{font:600 25px/1 var(--serif);text-decoration:none;letter-spacing:.02em}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;opacity:.85}nav a:hover{opacity:1}
+.lang{display:flex;gap:4px}
+.lang button{font:600 13px var(--sans);color:var(--hero-ink);background:none;border:1px solid rgba(246,237,232,.35);border-radius:6px;padding:6px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--petal);color:#17352B;border-color:var(--petal)}
+.hero{background:var(--hero);color:var(--hero-ink)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding-top:56px;padding-bottom:64px}
+.hero h1{font-size:clamp(40px,6vw,72px);margin-bottom:18px}
+.hero p{max-width:46ch;opacity:.9;margin:0 0 28px;font-size:18px}
+.btn{display:inline-block;background:var(--petal);color:#17352B;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:999px}
+.hero-art svg{width:100%;height:auto;max-height:440px}
+.hero-art .bloom{transform-origin:100px 80px;animation:open 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes open{from{transform:scale(.2) rotate(-60deg);opacity:0}to{transform:none;opacity:1}}
+section{padding:72px 0}
+h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:14px}
+.lead{max-width:62ch;color:var(--mute);font-size:18px;margin:0 0 36px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.fact{border-top:2px solid var(--gold);padding-top:14px}
+.fact h3{font-size:24px;margin-bottom:6px}.fact p{margin:0;color:var(--mute);font-size:16px}
+.alt{background:var(--tile)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .art{background:var(--tile);aspect-ratio:1/1}
+.card svg{width:100%;height:100%;display:block}
+.card .info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{font-size:24px}
+.spec{font-size:14.5px;color:var(--mute);margin:0 0 8px}
+.price{margin-top:auto;font:600 22px var(--serif)}
+.price small{display:block;font:400 13px var(--sans);color:var(--mute)}
+.note{margin-top:22px;font-size:14px;color:var(--mute)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about p{margin:0 0 14px;color:var(--mute)}
+.contact{background:var(--hero);color:var(--hero-ink)}
+.contact .lead{color:var(--hero-ink);opacity:.85}
+.contact ul{list-style:none;padding:0;margin:0 0 6px;display:grid;gap:6px}
+footer{background:var(--hero);color:var(--hero-ink);opacity:.9;padding:22px 0;font-size:14px;border-top:1px solid rgba(246,237,232,.15)}
+.art canvas,.hero-art canvas,#aboutArt canvas{display:block;width:100%;height:auto;aspect-ratio:1;max-height:460px;margin:0 auto;cursor:grab;touch-action:pan-y}
+.art canvas{max-height:none}
+@media (max-width:760px){nav{display:none}.hero .wrap,.about{grid-template-columns:1fr}.hero-art{order:-1;max-width:300px;margin:0 auto}section{padding:52px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-art .bloom{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="g-yellow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3A6"/><stop offset="1" stop-color="#C79A45"/></linearGradient>
+<linearGradient id="g-rose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F9D8CC"/><stop offset="1" stop-color="#CC8977"/></linearGradient>
+<linearGradient id="g-white" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#B7C0C7"/></linearGradient>
+<linearGradient id="dia" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#CFE9FA"/><stop offset="1" stop-color="#8CC3E8"/></linearGradient>
+</defs></svg>
+
+<header><div class="wrap">
+<a class="logo" href="#top">Bloom Eternal</a>
+<nav aria-label="Main"><a href="#diamonds" data-i18n="nav_d"></a><a href="#collection" data-i18n="nav_c"></a><a href="#about" data-i18n="nav_a"></a><a href="#contact" data-i18n="nav_k"></a></nav>
+<div class="lang" role="group" aria-label="Language"><button data-l="hy">HY</button><button data-l="ru">RU</button><button data-l="en">EN</button></div>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div><h1 data-i18n="h1"></h1><p data-i18n="hero_p"></p><a class="btn" href="#collection" data-i18n="cta"></a></div>
+<div class="hero-art" id="heroArt" role="img" aria-label="Flower ring with a diamond"></div>
+</div></div>
+
+<section id="diamonds"><div class="wrap">
+<h2 data-i18n="d_h"></h2><p class="lead" data-i18n="d_p"></p>
+<div class="facts">
+<div class="fact"><h3 data-i18n="f1h"></h3><p data-i18n="f1p"></p></div>
+<div class="fact"><h3 data-i18n="f2h"></h3><p data-i18n="f2p"></p></div>
+<div class="fact"><h3 data-i18n="f3h"></h3><p data-i18n="f3p"></p></div>
+<div class="fact"><h3 data-i18n="f4h"></h3><p data-i18n="f4p"></p></div>
+</div></div></section>
+
+<section id="collection" class="alt"><div class="wrap">
+<h2 data-i18n="c_h"></h2><p class="lead" data-i18n="c_p"></p>
+<div class="grid" id="grid"></div>
+<p class="note" data-i18n="c_note"></p>
+</div></section>
+
+<section id="about"><div class="wrap about">
+<div><h2 data-i18n="a_h"></h2><p data-i18n="a_p1"></p><p data-i18n="a_p2"></p></div>
+<div id="aboutArt" role="img" aria-label="Flower pendant"></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2 data-i18n="k_h"></h2><p class="lead" data-i18n="k_p"></p>
+<ul><li>hello@bloometernal.am</li><li>+374 00 000 000</li><li>Instagram: @bloometernal</li></ul>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Bloom Eternal. <span data-i18n="foot"></span></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const T={
+en:{nav_d:"Diamonds",nav_c:"Collection",nav_a:"About",nav_k:"Contact",
+h1:"Flowers that never fade",hero_p:"Gold jewelry set with lab-grown diamonds, shaped like the flowers you love.",cta:"View the collection",
+d_h:"Lab-grown diamonds",d_p:"Our diamonds are grown in a laboratory, not mined. They are real diamonds: the same carbon crystal, the same hardness, the same brilliance.",
+f1h:"Identical to mined diamonds",f1p:"Same chemistry and structure, and 10 on the Mohs scale.",
+f2h:"No mining",f2p:"Grown in weeks, with a far smaller impact on land and communities.",
+f3h:"Certified",f3p:"Stones come with a grading certificate.",
+f4h:"Better value",f4p:"Usually 30–50% less than a mined diamond of the same size and quality.",
+c_h:"Collection",c_p:"Six flowers, each cast in 18K gold and set with a lab-grown diamond.",c_note:"Sample prices in USD with an approximate AMD value. The final price depends on stone size and ring size.",
+a_h:"About Bloom Eternal",a_p1:"Every piece starts as a sketch of a real flower. We cast it in gold and set the stone by hand.",a_p2:"A flower lasts a season. We make jewelry that keeps the moment for good.",
+k_h:"Order or ask a question",k_p:"Tell us which flower you like and your ring size. We will reply within one day.",foot:"All diamonds are lab-grown.",
+m_yellow:"yellow",m_rose:"rose",m_white:"white",spec:"18K {m} gold, lab-grown diamond {ct} ct",
+n:["Lotus Ring","Peony Earrings","Daisy Pendant","Sakura Bracelet","Forget-me-not Earrings","Violet Ring"],
+title:"Bloom Eternal | Flower jewelry with lab-grown diamonds",desc:"Bloom Eternal: flower-shaped 18K gold jewelry with certified lab-grown diamonds."},
+ru:{nav_d:"Бриллианты",nav_c:"Коллекция",nav_a:"О нас",nav_k:"Контакты",
+h1:"Цветы, которые не увядают",hero_p:"Золотые украшения с лабораторными бриллиантами в форме любимых цветов.",cta:"Смотреть коллекцию",
+d_h:"Лабораторные бриллианты",d_p:"Наши бриллианты выращены в лаборатории, а не добыты в шахте. Это настоящие бриллианты: тот же кристалл углерода, та же твёрдость, тот же блеск.",
+f1h:"Идентичны природным",f1p:"Тот же состав и структура, 10 по шкале Мооса.",
+f2h:"Без добычи в шахтах",f2p:"Выращиваются за недели, с гораздо меньшим вредом для природы и людей.",
+f3h:"С сертификатом",f3p:"Камни поставляются с сертификатом качества.",
+f4h:"Выгоднее",f4p:"Обычно на 30–50% дешевле природного бриллианта того же размера и качества.",
+c_h:"Коллекция",c_p:"Шесть цветов, каждый отлит из золота 18K и украшен лабораторным бриллиантом.",c_note:"Ориентировочные цены в USD и примерная сумма в драмах. Итоговая цена зависит от размера камня и размера кольца.",
+a_h:"О Bloom Eternal",a_p1:"Каждое украшение начинается с эскиза настоящего цветка. Мы отливаем его из золота и закрепляем камень вручную.",a_p2:"Цветок живёт один сезон. Мы делаем украшения, которые сохраняют этот момент навсегда.",
+k_h:"Заказ и вопросы",k_p:"Напишите, какой цветок вам понравился, и укажите размер кольца. Мы ответим в течение дня.",foot:"Все бриллианты выращены в лаборатории.",
+m_yellow:"Жёлтое",m_rose:"Розовое",m_white:"Белое",spec:"{m} золото 18K, лабораторный бриллиант {ct} ct",
+n:["Кольцо «Лотос»","Серьги «Пион»","Кулон «Ромашка»","Браслет «Сакура»","Серьги «Незабудка»","Кольцо «Фиалка»"],
+title:"Bloom Eternal | Украшения-цветы с лабораторными бриллиантами",desc:"Bloom Eternal: украшения из золота 18K в форме цветов с сертифицированными лабораторными бриллиантами."},
+hy:{nav_d:"Ադամանդներ",nav_c:"Հավաքածու",nav_a:"Մեր մասին",nav_k:"Կապ",
+h1:"Ծաղիկներ, որոնք չեն թառամում",hero_p:"Ոսկե զարդեր լաբորատոր ադամանդներով՝ քո սիրելի ծաղիկների տեսքով։",cta:"Տեսնել հավաքածուն",
+d_h:"Լաբորատոր ադամանդներ",d_p:"Մեր ադամանդները աճեցվում են լաբորատորիայում, ոչ թե արդյունահանվում են հանքերից։ Դրանք իսկական ադամանդներ են՝ նույն ածխածնային բյուրեղը, նույն կարծրությունը, նույն փայլը։",
+f1h:"Նույնն են, ինչ բնականները",f1p:"Նույն բաղադրությունը և կառուցվածքը, Մոոսի սանդղակով՝ 10։",
+f2h:"Առանց հանքարդյունահանման",f2p:"Աճեցվում են շաբաթների ընթացքում՝ բնության և մարդկանց վրա շատ ավելի փոքր ազդեցությամբ։",
+f3h:"Վկայագրով",f3p:"Քարերը տրվում են որակի վկայագրով։",
+f4h:"Ավելի մատչելի",f4p:"Սովորաբար 30–50%-ով ավելի էժան, քան նույն չափի և որակի բնական ադամանդը։",
+c_h:"Հավաքածու",c_p:"Վեց ծաղիկ՝ յուրաքանչյուրը 18K ոսկուց, լաբորատոր ադամանդով։",c_note:"Օրինակելի գներ՝ ԱՄՆ դոլարով և մոտավոր գումարը դրամով։ Վերջնական գինը կախված է քարի և մատանու չափից։",
+a_h:"Bloom Eternal-ի մասին",a_p1:"Յուրաքանչյուր զարդ սկսվում է իսկական ծաղկի էսքիզից։ Մենք այն ձուլում ենք ոսկուց, իսկ քարը ամրացնում ենք ձեռքով։",a_p2:"Ծաղիկը ապրում է մեկ սեզոն։ Մենք պատրաստում ենք զարդեր, որոնք այդ պահը պահում են ընդմիշտ։",
+k_h:"Պատվեր կամ հարց",k_p:"Գրեք, թե որ ծաղիկն է ձեզ դուր եկել, և նշեք մատանու չափը։ Կպատասխանենք մեկ օրվա ընթացքում։",foot:"Բոլոր ադամանդները աճեցված են լաբորատորիայում։",
+m_yellow:"դեղին",m_rose:"վարդագույն",m_white:"սպիտակ",spec:"18K {m} ոսկի, լաբորատոր ադամանդ {ct} ct",
+n:["«Լոտոս» մատանի","«Պիոն» ականջօղեր","«Երիցուկ» կախազարդ","«Սակուրա» ապարանջան","«Անմոռուկ» ականջօղեր","«Մանուշակ» մատանի"],
+title:"Bloom Eternal | Ծաղկաձև զարդեր լաբորատոր ադամանդներով",desc:"Bloom Eternal՝ ծաղկաձև 18K ոսկե զարդեր վկայագրված լաբորատոր ադամանդներով։"}
+};
+const P=[{t:"ring",m:"yellow",ct:"0.50",usd:890},{t:"ear",m:"rose",ct:"0.80",usd:760},{t:"pend",m:"white",ct:"0.30",usd:540},{t:"brac",m:"rose",ct:"0.60",usd:1150},{t:"stud",m:"white",ct:"0.40",usd:390},{t:"ring2",m:"yellow",ct:"0.25",usd:480}];
+const fmt=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");
+function fl(x,y,r,n,m){let s=`<g>`;for(let i=0;i<n;i++){const a=360/n*i;s+=`<ellipse cx="${x}" cy="${y-r*.6}" rx="${r*.36}" ry="${r*.62}" transform="rotate(${a} ${x} ${y})" fill="url(#g-${m})" stroke="#000" stroke-opacity=".18" stroke-width=".8"/>`}
+const d=r*.3;return s+`<polygon points="${x},${y-d} ${x+d},${y} ${x},${y+d} ${x-d},${y}" fill="url(#dia)" stroke="#6BA6CC" stroke-width=".8"/><path d="M${x-d*.5} ${y-d*.1}L${x} ${y-d*.6}L${x+d*.5} ${y-d*.1}" stroke="#fff" fill="none" stroke-width=".9"/></g>`}
+const band=(cx,cy,r,m,w=8)=>`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="url(#g-${m})" stroke-width="${w}"/>`;
+function art(t,m){const v=s=>`<svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">${s}</svg>`;
+if(t==="ring")return v(band(100,138,44,m)+fl(100,80,32,6,m));
+if(t==="ring2")return v(band(100,140,42,m,7)+`<ellipse cx="72" cy="98" rx="8" ry="16" transform="rotate(-50 72 98)" fill="#7FA68C"/><ellipse cx="128" cy="98" rx="8" ry="16" transform="rotate(50 128 98)" fill="#7FA68C"/>`+fl(100,88,28,5,m));
+if(t==="ear"){const e=x=>`<line x1="${x}" y1="38" x2="${x}" y2="62" stroke="url(#g-${m})" stroke-width="3"/>`+fl(x,82,24,8,m)+`<line x1="${x}" y1="106" x2="${x}" y2="122" stroke="url(#g-${m})" stroke-width="2"/>`+fl(x,138,14,5,m);return v(e(60)+e(140))}
+if(t==="pend")return v(`<path d="M24 36Q100 150 176 36" fill="none" stroke="url(#g-${m})" stroke-width="3" stroke-dasharray="1 4" stroke-linecap="round"/>`+fl(100,112,30,8,m));
+if(t==="brac"){let s=`<ellipse cx="100" cy="100" rx="72" ry="40" fill="none" stroke="url(#g-${m})" stroke-width="4" stroke-dasharray="1 5" stroke-linecap="round"/>`;for(let i=0;i<5;i++){const a=Math.PI*(.15+i*.175)+Math.PI;s+=fl(Math.round(100+72*Math.cos(a)),Math.round(100+40*Math.sin(a)+(i==2?0:0)),i==2?17:12,5+(i%2),m)}for(let i=0;i<5;i++){const a=Math.PI*(.15+i*.175);s+=fl(Math.round(100+72*Math.cos(a)),Math.round(100+40*Math.sin(a)),i==2?17:12,5+(i%2),m)}return v(s)}
+return v(`<line x1="62" y1="60" x2="62" y2="78" stroke="url(#g-${m})" stroke-width="3"/><line x1="138" y1="60" x2="138" y2="78" stroke="url(#g-${m})" stroke-width="3"/>`+fl(62,100,24,5,m)+fl(138,100,24,5,m))}
+document.getElementById("heroArt").innerHTML=`<svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g class="bloom">${fl(100,80,32,6,"rose").replace("<g>","<g>")}</g>${band(100,138,44,"rose")}</svg>`;
+document.getElementById("aboutArt").innerHTML=art("pend","yellow").replace("<svg ",'<svg style="max-width:360px;margin:0 auto;display:block" ');
+const MC={yellow:0xe6bb5c,rose:0xe3a190,white:0xeef1f3};
+let R3,ET,CAM,items=[],last=0,started=0,IO;
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function env3(r){const s=new THREE.Scene();
+s.add(new THREE.Mesh(new THREE.SphereGeometry(50,32,16),new THREE.MeshBasicMaterial({color:0x4a5550,side:THREE.BackSide})));
+const L=(x,y,z,w,h,c,k)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(c).multiplyScalar(k),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,0,0);s.add(m)};
+L(0,32,10,30,30,0xffffff,4);L(-32,5,12,10,34,0xffffff,3);L(32,5,-10,10,30,0xfff0d8,3);L(0,-18,32,40,8,0xbfd7ff,2);L(0,10,-40,34,12,0xffffff,3);
+const p=new THREE.PMREMGenerator(r);const t=p.fromScene(s,.04).texture;p.dispose();return t}
+const mt=m=>new THREE.MeshStandardMaterial({color:MC[m],metalness:1,roughness:.2,envMapIntensity:1.3});
+const DIA=()=>new THREE.MeshStandardMaterial({color:0xdff1ff,metalness:.2,roughness:.03,flatShading:true,envMapIntensity:2.4});
+function gem(s){const g=new THREE.Group(),D=DIA();
+const c=new THREE.Mesh(new THREE.CylinderGeometry(s*.6,s,s*.32,12),D);c.position.y=s*.16;
+const p=new THREE.Mesh(new THREE.ConeGeometry(s,s*.7,12),D);p.rotation.x=Math.PI;p.position.y=-s*.35;g.add(c,p);return g}
+function flower(m,n,r){const g=new THREE.Group(),M=mt(m),G=new THREE.SphereGeometry(1,24,14);
+for(let L=0;L<2;L++){const k=L?.72:1;for(let i=0;i<n;i++){const pv=new THREE.Group(),p=new THREE.Mesh(G,M);
+p.scale.set(.36*r*k,.11*r*k,.62*r*k);p.position.z=.6*r*k;p.rotation.x=-.2;pv.rotation.y=(i+L*.5)/n*Math.PI*2;pv.position.y=L*.07*r;pv.add(p);g.add(pv)}}
+const d=gem(.3*r);d.position.y=.13*r;g.add(d);return g}
+function build(t,m){const o=new THREE.Group(),M=mt(m);
+const add=(g,x,y,z,s,rx)=>{g.position.set(x,y,z);g.scale.setScalar(s);if(rx)g.rotation.x=rx;o.add(g)};
+const cyl=(x,y,h)=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(.03,.03,h,8),M);c.position.set(x,y,0);o.add(c)};
+const tube=(pts,closed,r)=>{const c=new THREE.CatmullRomCurve3(pts,closed);o.add(new THREE.Mesh(new THREE.TubeGeometry(c,96,r,8,closed),M))};
+if(t==="ring"||t==="ring2"){o.add(new THREE.Mesh(new THREE.TorusGeometry(1,.085,20,80),M));
+add(flower(m,t==="ring"?6:5,1),0,1.06,0,t==="ring"?.62:.52);
+if(t==="ring2")[-1,1].forEach(s=>{const l=new THREE.Mesh(new THREE.SphereGeometry(1,16,10),M);l.scale.set(.3,.05,.12);l.position.set(s*.42,1,0);l.rotation.z=-s*.4;o.add(l)});
+o.rotation.x=.3;o.position.y=-.4}
+else if(t==="ear"){[-.9,.9].forEach(x=>{add(flower(m,8,1),x,.8,0,.5,Math.PI/2);cyl(x,.25,.9);add(flower(m,5,1),x,-.3,0,.3,Math.PI/2)});o.position.y=.1}
+else if(t==="pend"){const P=[];for(let i=0;i<=14;i++){const x=-1.4+i*.2;P.push(new THREE.Vector3(x,-.5+1.7*(x/1.4)*(x/1.4),0))}tube(P,false,.022);
+add(flower(m,8,1),0,-.62,0,.55,Math.PI/2);o.position.y=.2}
+else if(t==="brac"){const P=[];for(let k=0;k<24;k++){const a=k/24*Math.PI*2;P.push(new THREE.Vector3(1.5*Math.cos(a),0,.95*Math.sin(a)))}tube(P,true,.035);
+for(let j=0;j<8;j++){const a=j/8*Math.PI*2;add(flower(m,j%2?6:5,1),1.5*Math.cos(a),.04,.95*Math.sin(a),.24)}o.rotation.x=.9;o.position.y=.3}
+else{[-.85,.85].forEach(x=>add(flower(m,6,1),x,.2,0,.55,Math.PI/2))}
+return o}
+function tick(t){const dt=Math.min(.05,(t-last)/1e3);last=t;
+items.forEach(it=>{if(!it.vis)return;if(!reduce&&!it.drag){it.pv.rotation.y+=dt*.55;it.dirty=1}
+if(it.dirty){R3.render(it.scene,CAM);it.ctx.clearRect(0,0,512,512);it.ctx.drawImage(R3.domElement,0,0);it.dirty=0}});
+requestAnimationFrame(tick)}
+function mount3d(){if(!window.THREE)return;
+try{if(!R3){R3=new THREE.WebGLRenderer({antialias:true,alpha:true});R3.setSize(512,512);R3.toneMapping=THREE.ACESFilmicToneMapping;R3.toneMappingExposure=1.1;R3.outputEncoding=THREE.sRGBEncoding;ET=env3(R3);
+CAM=new THREE.PerspectiveCamera(34,1,.1,50);CAM.position.set(0,1.6,6.2);CAM.lookAt(0,.45,0);
+IO=new IntersectionObserver(es=>es.forEach(e=>{const it=e.target._it;if(it){it.vis=e.isIntersecting;it.dirty=1}}))}
+items=[];const g=document.getElementById("grid").children;
+const L=[[document.getElementById("heroArt"),"ring","rose"],[document.getElementById("aboutArt"),"pend","yellow"]];
+P.forEach((p,i)=>L.push([g[i].querySelector(".art"),p.t,p.m]));
+L.forEach(([el,t,m])=>{const cv=document.createElement("canvas");cv.width=cv.height=512;cv._it=null;
+const sc=new THREE.Scene();sc.environment=ET;const dl=new THREE.DirectionalLight(0xffffff,.5);dl.position.set(2,4,5);sc.add(dl);
+const pv=new THREE.Group();pv.add(build(t,m));sc.add(pv);
+const it={ctx:cv.getContext("2d"),scene:sc,pv,vis:false,dirty:1,drag:false};cv._it=it;items.push(it);
+let x0=0;cv.addEventListener("pointerdown",e=>{it.drag=true;x0=e.clientX;cv.setPointerCapture(e.pointerId);cv.style.cursor="grabbing"});
+cv.addEventListener("pointermove",e=>{if(it.drag){pv.rotation.y+=(e.clientX-x0)*.012;x0=e.clientX;it.dirty=1}});
+const up=()=>{it.drag=false;cv.style.cursor="grab"};cv.addEventListener("pointerup",up);cv.addEventListener("pointercancel",up);
+cv.setAttribute("aria-hidden","true");el.replaceChildren(cv);IO.observe(cv)});
+if(!started){started=1;requestAnimationFrame(tick)}}catch(e){console.error(e)}}
+function setLang(l){const d=T[l];document.documentElement.lang=l;document.title=d.title;
+document.querySelector('meta[name=description]').content=d.desc;
+document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=d[e.dataset.i18n]);
+document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
+document.getElementById("grid").innerHTML=P.map((p,i)=>`<article class="card"><div class="art">${art(p.t,p.m)}</div><div class="info"><h3>${d.n[i]}</h3><p class="spec">${d.spec.replace("{m}",d["m_"+p.m]).replace("{ct}",p.ct)}</p><div class="price">$${fmt(p.usd)}<small>≈ ${fmt(p.usd*390)} ֏</small></div></div></article>`).join("");
+mount3d();try{localStorage.setItem("be-lang",l)}catch(e){}}
+document.querySelector(".lang").addEventListener("click",e=>{const l=e.target.dataset&&e.target.dataset.l;if(l)setLang(l)});
+let L="hy";try{const s=localStorage.getItem("be-lang");if(s&&T[s])L=s;else{const n=(navigator.language||"").slice(0,2);L=T[n]?n:"hy"}}catch(e){}
+setLang(L);
+</script>
+</body>
+</html>
